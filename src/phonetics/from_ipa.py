@@ -1,7 +1,5 @@
-from collections import defaultdict
 
-
-TWO_CHAR_KEYS = defaultdict(lambda x: x, {
+TWO_CHAR_KEYS = {
     "oʊ": "o",
     "eɪ": "ä",
     "aɪ": "ï",
@@ -19,9 +17,9 @@ TWO_CHAR_KEYS = defaultdict(lambda x: x, {
     "tʃ": "c",
     "dʒ": "j",
     "hw": "ξ",
-})
+}
 
-ONE_CHAR_KEYS = defaultdict(lambda x: x, {
+ONE_CHAR_KEYS = {
     "æ": "a",
     "ɛ": "e",
     "ɪ": "i",
@@ -39,4 +37,5 @@ ONE_CHAR_KEYS = defaultdict(lambda x: x, {
     "j": "y",
     "θ": "þ",
     "ð": "þ",
-})
+    "ɡ": "g",
+}

@@ -1,11 +1,20 @@
+import re
+
 
 class Phoneticizer:
 
-    def __init__(self, word_to_ipa, one_char_keys, two_char_keys, max_line_length=80):
+    def __init__(self, word_to_ipa, one_char_keys, two_char_keys,
+                 max_line_length=100, stoppers=".!?", specials=",;\"",
+                 ):
         self.word_to_ipa = word_to_ipa
         self.one_char_keys = one_char_keys
         self.two_char_keys = two_char_keys
+
         self.max_line_length = max_line_length
+        self.stoppers = stoppers
+        self.specials = specials
+        self.punctuation = stoppers + specials
+        self.split_regex = r"[\w']+|[" + self.punctuation + "]"
 
     def update_maps(self, *_,
                     word_to_ipa=None,
@@ -46,7 +55,7 @@ class Phoneticizer:
 
     @staticmethod
     def _write_txt(file, text):
-        with open(file, "r") as opened:
+        with open(file, "w") as opened:
             opened.write(text)
 
     @staticmethod
@@ -62,41 +71,51 @@ class Phoneticizer:
         return formatted
 
     def _phoneticize_text(self, text):
-        words = text.split(" ")
+        words = [word.lower() for word in re.findall(self.split_regex, text)]
         output = []
         for word in words:
             phoneticized = self._phoneticize_word(word)
-            output += phoneticized
+            output.append(phoneticized)
         return output
 
     def _format_words(self, words):
         line_length = 0
         output = ""
+        last = ""
         for word in words:
-            if line_length >= self.max_line_length:
+            if last == "" or last in self.stoppers:
+                word = word.capitalize()
+            if line_length >= self.max_line_length and last not in self.punctuation and word not in self.punctuation:
                 output += "\n"
                 line_length = 0
+            elif word not in self.punctuation:
+                word = " " + word
             output += word
             line_length += len(word)
-        return output
+            last = word
+        return output.strip()
 
     def _phoneticize_word(self, word):
+        if word not in self.word_to_ipa.keys():
+            return word
+
+        ipa = self.word_to_ipa[word]
         phoneticized = ""
         index = 0
-        length = len(word)
-
+        length = len(ipa)
         while index + 1 < length:
-            first = word[index]
-            second = word[index + 1]
+            first = ipa[index]
+            second = ipa[index + 1]
             combined = first + second
             if combined in self.two_char_keys.keys():
                 phoneticized += self.two_char_keys[combined]
                 index += 2
             else:
-                phoneticized += self.one_char_keys[first]
+                phoneticized += self.one_char_keys.setdefault(first, first)
                 index += 1
 
         if index < length:
-            phoneticized += self.one_char_keys[word[index]]
+            final = ipa[index]
+            phoneticized += self.one_char_keys.setdefault(final, final)
 
         return phoneticized
