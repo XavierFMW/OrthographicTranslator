@@ -2,7 +2,7 @@ import re
 
 
 IPA_FILE = "en_US_ipa.txt"
-OUTPUT_FILE = "phonetics.py"
+OUTPUT_FILE = "to_ipa.py"
 
 DICT_NAME = "WORD_TO_IPA"
 REMOVED_CHARS = "/ˈˌ,"
