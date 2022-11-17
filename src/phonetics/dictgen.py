@@ -1,10 +1,11 @@
+from from_ipa import *
 import re
 
 
 IPA_FILE = "en_US_ipa.txt"
-OUTPUT_FILE = "to_ipa.py"
+OUTPUT_FILE = "phonetic_words.py"
 
-DICT_NAME = "WORD_TO_IPA"
+DICT_NAME = "WORD_TO_PHONETIC"
 REMOVED_CHARS = "/ˈˌ,"
 SPLIT_REGEX = r"[ \t]"
 
@@ -13,13 +14,32 @@ MAPPING_FORMAT = '\t"%s": "%s",\n'
 FOOTER_FORMAT = "}\n"
 
 
+def get_phonetic_from_ipa(ipa):
+    phoneticized = ""
+    index = 0
+    length = len(ipa)
+    while index < length:
+        increment = index + 1
+        head = ipa[index]
+        if increment == length or head + ipa[increment] not in TWO_CHAR_KEYS.keys():
+            phoneticized += ONE_CHAR_KEYS.setdefault(head, head)
+            index += 1
+        else:
+            tail = ipa[increment]
+            phoneticized += TWO_CHAR_KEYS[head + tail]
+            index += 2
+
+    return phoneticized
+
+
 def get_mapping_from_line(line):
     unzipped = re.split(SPLIT_REGEX, line)
-    key = unzipped[0]
-    value = unzipped[1].strip().translate(
+    word = unzipped[0]
+    ipa = unzipped[1].strip().translate(
         {ord(i): None for i in REMOVED_CHARS}
     )
-    return MAPPING_FORMAT % (key, value)
+    phoneticized = get_phonetic_from_ipa(ipa)
+    return MAPPING_FORMAT % (word, phoneticized)
 
 
 def main():
