@@ -1,14 +1,18 @@
-from phonetics import phonetic_words
-from phoneticize import Phoneticizer
+# Orthographic Translator - A program that converts texts between writing systems while maintaining word pronunciation.
+# Copyright 2022 Xavier Mercerweiss, xavifmw@gmail.com. Licensed under the MIT License.
+
+from ipa_to_script import orthography
+from translator import Translator
 
 
 INPUT = "in.txt"
 OUTPUT = "out.txt"
+FROM_PDF = False
 
 
 def main():
-    phoneticizer = Phoneticizer(phonetic_words.WORD_TO_PHONETIC)
-    phoneticizer.phoneticize(file_in=INPUT, file_out=OUTPUT)
+    translate = Translator(orthography.MAPPING)
+    translate.translate_file(INPUT, OUTPUT, FROM_PDF)
 
 
 if __name__ == "__main__":

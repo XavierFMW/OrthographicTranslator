@@ -1,5 +1,7 @@
+# Orthographic Translator - A program that converts texts between writing systems while maintaining word pronunciation.
+# Copyright 2022 Xavier Mercerweiss, xavifmw@gmail.com. Licensed under the MIT License.
 
-WORD_TO_PHONETIC = {
+MAPPING = {
 	"aaberg": "òbēg",
 	"aachen": "òkun",
 	"aachener": "òkunē",

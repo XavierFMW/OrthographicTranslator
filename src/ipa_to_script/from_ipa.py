@@ -1,3 +1,5 @@
+# Orthographic Translator - A program that converts texts between writing systems while maintaining word pronunciation.
+# Copyright 2022 Xavier Mercerweiss, xavifmw@gmail.com. Licensed under the MIT License.
 
 TWO_CHAR_KEYS = {
     "oʊ": "o",
