@@ -1,7 +1,7 @@
 # Orthographic Translator - A program that converts texts between writing systems while maintaining word pronunciation.
 # Copyright 2022 Xavier Mercerweiss, xavifmw@gmail.com. Licensed under the MIT License.
 
-from ipa_to_script import orthography
+from ipa_to_orthography import orthography
 from translator import Translator
 
 
