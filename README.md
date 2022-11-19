@@ -1,20 +1,21 @@
-# PhoneticEnglish
-This program allows any piece of English text into a custom made fully phonetic English writing system. All words are pronounced exactly the same, they are merely written in a way which fully reflects their pronunciation.
+# Orthogtaphic Translator
+Copyright 2022 Xavier Mercerweiss.
+
+Converts pieces of text from one writing system to another based purely on the pronunciation of each word as expressed using the International Phonetic Alphabet. IPA data for any language may be utlized, and the characters associated with each phoneme as represented using the IPA may be altered. The IPA data and character mappings provided are designed around American English as spoken in the Western U.S. This data was sourced from <https://github.com/open-dict-data/ipa-dict>, and many thanks are given to that project's contributors.
+
+The orthography provided alongside this project is the Feŋliʃ (Phenglish, Phonetic English) writing system, an orthography designed for American English in which every character represents exactly one sound, and every sound is represented by exactly one character. This project was created in order to facilitate the conversion of text into this orthography. This writing system is elaborated upon further in this document.
 
 ## Implementation
- 
-### Dictgen
-Dictgen, a script residing within the `phonetics` directory, will convert any text file containing tab-delimited IPA data into a Python dictionary mapping every lowercase English word with its equivalent within the phonetic writing system, with the phoneticized version based on the IPA data provided. The IPA data for US English is provided with this program, as well as a dictionary of phoneticized words based on that data. This data was sourced from <https://github.com/open-dict-data/ipa-dict>, and many thanks are given to that project's contributors.
+### Orthographer
 
-### Phoneticizer
-The Phoneticizer class, provided with a mapping between English words and their phonetic counterparts, will convert text from a provided TXT or PDF file into the phonetic English writing system, automatically format the output, and save the output to a TXT file. Formatting may not be perfect, however formatting settings, such as maximum line length, capitalization, sentence stoppers, and special characters, may be altered at the disgression of the user.
 
-## The Phonetic Writing System
-The phonetic English writing system described above attempts to map every sound, as present in American English, to a single letter with which that sound may be written. This writing system aims to reduce the ambiguity present in English pronunciation and streamline the writing process. 
+### Translator
 
-NOTE: This writing system was created by an American living in Colorado, and therefore will reflect the accent present in that region. Many sounds which may be distinct in other accents, especially vowels, have been deliberately condensed such that they reflect the accent of the creator. The phonology and orthogrophy of this writing system may need to be drastically altered to match your speech!
 
-This writing system utilizes the following orthogrophy.
+## The Feŋliʃ Writing System
+Feŋliʃ (Phenglish), short for phonetic English, is an alternative English writing system in which every letter makes exactly one sound and every sound is written using exactly one letter. The writing system heavily utilizes diacritical marks, though does not reflect the meanings of these marks in other languages. Several sounds represented by consonant pairs (ie: th, sh) are assigned characters not utilized in the Latin script, such as þ and ʃ.
+
+NOTE: This writing system was created to reflect American English as spoken in the Western U.S., and will best reflect English as spoken in this region.
 
 ### Vowels
 
@@ -23,5 +24,5 @@ This writing system utilizes the following orthogrophy.
 
  
 ## Changelog
-# Version 1.0
+# Version 1.0 - Nov. 17th, 2022
 - Project released.
