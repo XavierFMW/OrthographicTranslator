@@ -21,6 +21,7 @@ NOTE: This writing system was created to reflect American English as spoken in t
 
 | Letter | US IPA Symbol | Sound |
 |:---:|:---:|:---:|
+| a | æ | ah, c*a*t, b*a*d |
 
  
 ## Changelog
