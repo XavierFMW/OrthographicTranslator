@@ -73,7 +73,7 @@ NOTE: This writing system was created to reflect American English as spoken in t
 | ʒ | ʒ | zhuh, vi**s**ion, trea**s**ure |
 
 ## Changelog
-### Version 1.10 - Nov. 19th, 2022
+### Version 1.1 - Nov. 19th, 2022
 - Public Release.
 
 ### Version 1.0 - Nov. 17th, 2022
