@@ -18,7 +18,6 @@ Feŋliʃ (Phenglish), short for phonetic English, is an alternative English writ
 NOTE: This writing system was created to reflect American English as spoken in the Western U.S., and will best reflect English as spoken in this region.
 
 ### Vowels
-
 | Letter | US IPA Symbol | Sound |
 |:---:|:---:|:---:|
 | a | æ | ah, c**a**t, b**a**d |
@@ -45,6 +44,37 @@ NOTE: This writing system was created to reflect American English as spoken in t
 | ù | ʊ | uhh, l**oo**k, w**o**man, f**u**ll |
 | ỳ | *Unused* | |
 
+### Vowels
+| Letter | US IPA Symbol | Sound |
+|:---:|:---:|:---:|
+| b | b | buh, **b**ut, ru**bb**er |
+| d | d | duh, **d**og, roa**d** |
+| k | k | ka, **c**at, **k**ite |
+| c | tʃ | ch, **ch**air, **ch**annel, spee**ch** |
+| l | ɫ | luh, **l**eft, **l**itt**le** |
+| j | dʒ | juh, **g**in, **j**ump, **j**oin |
+| r | ɹ | ruh, **r**un, **r**ug |
+| t | t | tuh, **t**on, bu**tt** |
+| p | p | puh, **p**un, s**p**in |
+| f | f | fuh, **f**riend, **f**ries |
+| h | h | huh, **h**am, **h**elp |
+| g | g | guh, **g**um, **g**o |
+| m | m | muh, **m**an, spas**m** |
+| n | n | nuh, **n**ote, hidd**en** |
+| ŋ | ŋ | nguh, si**ng**, ri**ng** |
+| y | j | yuh, **y**ou, **y**oke, **y**um |
+| s | s | suh, **s**et, i**ce** |
+| v | v | vuh, **v**oice, na**v**el |
+| z | z | zuh, **z**oom, **x**ylophone |
+| w | w | wuh, **o**ne, **w**in |
+| þ | θ, ð | th, wi**th**, **th**e |
+| ʃ | ʃ | sh, **sh**out, **sh**eep |
+| ξ | hw | whuh, **wh**ich, **wh**en |
+| ʒ | ʒ | zhuh, vi**s**ion, trea**s**ure |
+
 ## Changelog
+### Version 1.10 - Nov. 19th, 2022
+- Public Release.
+
 ### Version 1.0 - Nov. 17th, 2022
 - Initial Release.
