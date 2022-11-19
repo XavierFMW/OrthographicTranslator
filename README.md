@@ -22,8 +22,19 @@ NOTE: This writing system was created to reflect American English as spoken in t
 | Letter | US IPA Symbol | Sound |
 |:---:|:---:|:---:|
 | a | æ | ah, c**a**t, b**a**d |
+| e | ɛ | eh, b**e**d, b**e**t |
+| i | ɪ | ih, s**i**t, b**i**g, **E**ngland | 
+| o | oʊ | oh, n**o**, h**o**pe, m**oa**t |
+| u | ə, ʌ | uh, s**u**n, **a**bout, fr**o**m |
+| ä | eɪ | ayy, c**a**ke, h**ey** |
+| ë | i | ee, k**ee**p, sk**i**, b**ea**ch |
+| ï | aɪ | eye, b**i**ke, m**y**, fl**y** |
+| ö | aʊ | ow, d**ow**n, ab**ou**t |
+| ü | u | yoo, c**u**te, f**ew**, y**ou** |
+| ÿ | ɔɪ | oi, j**oi**n, b**oy**, c**oi**l |
 
- 
+
+
 ## Changelog
 # Version 1.0 - Nov. 17th, 2022
 - Initial Release.
