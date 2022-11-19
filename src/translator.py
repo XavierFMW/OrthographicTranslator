@@ -58,7 +58,7 @@ class Translator:
         """
         return self._process_text(text)
 
-    def translate_file(self, input_path, output_path, from_pdf=False):
+    def translate_file(self, input_path, output_path=None, from_pdf=False):
         """
         Replaces each word within the text from a given TXT or PDF file with its mapped counterpart, formats the
         output, and saves it to a given TXT file.
@@ -66,10 +66,13 @@ class Translator:
         :param input_path: The path to a TXT or PDF file containing the text to be converted.
         :param output_path: The path to a TXT file to which the output will be saved.
         :param from_pdf: Whether the input file is a PDF file.
+        :return: If no output path is provided, the processed text will be directly returned.
         """
         read = self._read_pdf if from_pdf else self._read_txt
         unprocessed = read(input_path)
         processed = self._process_text(unprocessed)
+        if output_path is None:
+            return processed
         self._write_txt(output_path, processed)
 
     @staticmethod
