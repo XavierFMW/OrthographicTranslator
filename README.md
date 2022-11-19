@@ -32,9 +32,19 @@ NOTE: This writing system was created to reflect American English as spoken in t
 | ö | aʊ | ow, d**ow**n, ab**ou**t |
 | ü | u | yoo, c**u**te, f**ew**, y**ou** |
 | ÿ | ɔɪ | oi, j**oi**n, b**oy**, c**oi**l |
-
-
+| ā | ɑɹ | ar, c**ar**, st**ar**t |
+| ē | ɝ, ɚ | er, aft**er**, col**or** |
+| ī | ɪɹ | eer, h**ere**, m**irr**or, n**ear** |
+| ō | ɔɹ, ʊɹ, ʊɚ | or, h**orr**or, w**arr**ior |
+| ū | *Unused* | |
+| ȳ | *Unused* | |
+| à | ɛɹ, eɹ, ɛɚ, æɹ | air, c**arr**y, th**ere**, h**air** |
+| è | *Unused* | |
+| ì | *Unused* | |
+| ò | ɔ, ɑ | aw, t**o**p, d**o**g, **o**ffice |
+| ù | ʊ | uhh, l**oo**k, w**o**man, f**u**ll |
+| ỳ | *Unused* | |
 
 ## Changelog
-# Version 1.0 - Nov. 17th, 2022
+### Version 1.0 - Nov. 17th, 2022
 - Initial Release.
